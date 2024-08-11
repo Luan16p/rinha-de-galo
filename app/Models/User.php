@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'level',
+        'age',
+        'profile_image',
+        'bio'
     ];
 
     /**
@@ -41,4 +45,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roosters() {
+        return $this->hasMany(Rooster::class, 'id_rooster_owner');
+    }
 }
