@@ -16,13 +16,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // Gerar dados de exemplo para a tabela users
         DB::table('users')->insert([
             [
                 'name' => 'John Doe',
                 'email' => 'john.doe@example.com',
                 'email_verified_at' => now(),
-                'password' => Hash::make('password123'), // Certifique-se de hashear a senha
+                'password' => Hash::make('password123'),
                 'profile_image' => 'path/to/profile_image.jpg',
                 'bio' => 'Lorem ipsum dolor sit amet.',
                 'age' => 30,
