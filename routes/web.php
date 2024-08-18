@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,6 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/test', [TestController::class, 'index'])->name('index');
-Route::get('/test/{id}', [TestController::class, 'showRegistersById'])->name('show-registers-by-id');
+Route::get('/', function () {
+    return 'Hello World!';
+});
